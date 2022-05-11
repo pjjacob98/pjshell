@@ -1,10 +1,7 @@
-FROM phusion/baseimage:bionic-1.0.0
-
-# Use baseimage-docker's init system:
-CMD ["/sbin/my_init"]
+FROM alpine:edge
 
 # Install dependencies:
-RUN apt-get update && apt-get install -y \
+RUN apk add --no-cache \
     bash \
     curl \
     sudo \
@@ -12,7 +9,6 @@ RUN apt-get update && apt-get install -y \
     git \
     make \
     ffmpeg \
-    busybox \
     build-essential \
     nodejs \
     npm \
@@ -28,7 +24,6 @@ COPY /stuff /home/stuff
 
 # Run config.sh and clean up APT:
 RUN sh /home/config.sh \
- && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install the bot:
 RUN git clone https://github.com/botgram/shell-bot.git \
