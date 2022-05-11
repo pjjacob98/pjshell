@@ -9,7 +9,8 @@ RUN apk add --no-cache \
     git \
     make \
     ffmpeg \
-    build-essential \
+    make \
+    build-base \
     nodejs \
     npm \
  && mkdir -p /home/stuff
