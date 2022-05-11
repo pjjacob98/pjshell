@@ -3,6 +3,8 @@ FROM alpine:edge
 # Install dependencies:
 RUN apk add --no-cache \
     bash \
+    python3-dev \
+    py3-pip \
     curl \
     sudo \
     wget \
