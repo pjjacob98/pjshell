@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     git \
     make \
+    ffmpeg \
     busybox \
     build-essential \
     nodejs \
