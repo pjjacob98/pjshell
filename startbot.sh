@@ -10,7 +10,7 @@ echo "Creating config.json..."
 cd /home/shell-bot
 cat > config.json << EOF
 {
-    "authToken": "5309511285:AAGyJoOBvwU3mv2swMzQFc7bvs8tLu_Ya4k",
+    "authToken": "5309511285:AAG6Bssnf6jKnuwihCfbms2Gt3iBiIA7Nfs",
     "owner": 1137436016
 }
 EOF
