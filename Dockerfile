@@ -22,15 +22,11 @@ WORKDIR /home
 
 # Copy files:
 COPY startbot.sh /home
-COPY config.sh /home
-COPY /stuff /home/stuff
 
 # Install the bot:
 RUN git clone https://github.com/botgram/shell-bot.git \
  && cd shell-bot \
  && npm install
-
-RUN echo "Uploaded files:" && ls /home/stuff/
 
 # Run bot script:
 CMD bash /home/startbot.sh
